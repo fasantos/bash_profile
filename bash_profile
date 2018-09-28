@@ -346,9 +346,14 @@ alias gittam= "git tag -am"
 alias npmG="npm list -g --depth=0"
 alias npmd="npm run dev"
 alias npms="npm run start"
+alias npmt="npm run test"
 alias envp="export NODE_ENV=production"
 alias envd="export NODE_ENV=development"
 alias use="nvm use"
+
+function gitchr () {
+    git checkout -b ${1} origin/${1}
+}
 
 #   httpDebug:  Download a web page and show info on what took time
 #   -------------------------------------------------------------------
