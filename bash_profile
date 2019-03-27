@@ -331,7 +331,7 @@ alias gitch="git checkout"
 alias gitd="git diff"
 alias gitdb="git push origin --delete"
 alias gitdbl="git branch -d"
-alias gitf="git fetch"
+alias gitf="git fetch --all"
 alias gitl="git log --oneline --decorate --all --graph"
 alias gitm="git merge"
 alias gitn="git checkout -b"
@@ -340,9 +340,9 @@ alias gitpl="git pull --rebase"
 alias gits="git status -s"
 alias gitst="git stash"
 alias gitstp="git stash pop"
-alias gitr= "git rebase"
-alias gitrh= "git reset --hard"
-alias gittam= "git tag -am"
+alias gitr="git rebase"
+alias gitrh="git reset --hard"
+alias gittam="git tag -am"
 alias npmG="npm list -g --depth=0"
 alias npmd="npm run dev"
 alias npms="npm run start"
@@ -412,6 +412,13 @@ function copyProIndex () {
 #   ------------------------------------------------------------
 function iterm2_print_user_vars() {
   iterm2_set_user_var gitBranch $((git branch 2> /dev/null) | grep \* | cut -c3-)
+}
+
+#   Save and commit this bash_profile 
+#   ------------------------------------------------------------
+function bash_gitc() {
+  \cp -rf ~/workspace/sideProjects/bash_profile/bash_profile ~/.bash_profile
+  gitc ${1}
 }
 
 . "/Users/filomeno/.acme.sh/acme.sh.env"
