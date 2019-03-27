@@ -325,7 +325,7 @@ fi
 #nvm use v4
 alias gita="git add"
 alias gitb="git branch -a"
-alias gitc="git commit -am"
+alias gitc="git commit -am $@"
 alias gitcm="git commit -m"
 alias gitch="git checkout"
 alias gitd="git diff"
