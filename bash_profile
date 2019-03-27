@@ -418,7 +418,8 @@ function iterm2_print_user_vars() {
 #   ------------------------------------------------------------
 function save_bp() {
   \cp -rf ~/workspace/sideProjects/bash_profile/bash_profile ~/.bash_profile
-  gitc "bash_gitc updated"
+  gitc "${1}"
+  gitps
 }
 
 . "/Users/filomeno/.acme.sh/acme.sh.env"
