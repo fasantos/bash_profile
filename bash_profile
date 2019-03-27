@@ -418,7 +418,7 @@ function iterm2_print_user_vars() {
 #   ------------------------------------------------------------
 function bash_gitc() {
   \cp -rf ~/workspace/sideProjects/bash_profile/bash_profile ~/.bash_profile
-  gitc ${1}
+  git commit -am "bash_gitc updated"
 }
 
 . "/Users/filomeno/.acme.sh/acme.sh.env"
