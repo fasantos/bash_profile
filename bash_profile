@@ -414,11 +414,11 @@ function iterm2_print_user_vars() {
   iterm2_set_user_var gitBranch $((git branch 2> /dev/null) | grep \* | cut -c3-)
 }
 
-#   Save and commit this bash_profile 
+#   Save, commit and push this bash_profile 
 #   ------------------------------------------------------------
 function save_bp() {
   \cp -rf ~/workspace/sideProjects/bash_profile/bash_profile ~/.bash_profile
-  gitc "${1}"
+  gitc "$@"
   gitps
 }
 
