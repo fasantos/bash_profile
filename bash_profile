@@ -416,9 +416,9 @@ function iterm2_print_user_vars() {
 
 #   Save and commit this bash_profile 
 #   ------------------------------------------------------------
-function bash_gitc() {
+function save_bp() {
   \cp -rf ~/workspace/sideProjects/bash_profile/bash_profile ~/.bash_profile
-  git commit -am "bash_gitc updated"
+  gitc "bash_gitc updated"
 }
 
 . "/Users/filomeno/.acme.sh/acme.sh.env"
