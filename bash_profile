@@ -331,12 +331,11 @@ alias gitch="git checkout"
 alias gitd="git diff"
 alias gitdb="git push origin --delete"
 alias gitdbl="git branch -d"
-alias gitf="git fetch --all"
+alias gitf="git fetch -p --all"
 alias gitl="git log --oneline --decorate --all --graph"
 alias gitm="git merge"
 alias gitn="git checkout -b"
 alias gitps="git push && git push --tags"
-alias gitpl="git pull --rebase"
 alias gits="git status -s"
 alias gitst="git stash"
 alias gitstp="git stash pop"
@@ -353,6 +352,11 @@ alias use="nvm use"
 
 function gitchr () {
     git checkout -b ${1} origin/${1}
+}
+
+function gitpl () {
+    git pull --rebase
+    git remote prune origin
 }
 
 #   httpDebug:  Download a web page and show info on what took time
@@ -418,7 +422,6 @@ function iterm2_print_user_vars() {
 #   ------------------------------------------------------------
 function save_bp() {
   \cp -rf ~/workspace/sideProjects/bash_profile/bash_profile ~/.bash_profile
-  echo gitc \"$@\"
   gitc  \"$@\"
   gitps
 }
