@@ -30,6 +30,7 @@
 #   ------------------------------------------------------------
     export PATH="$PATH:/usr/local/bin/"
     export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+    export PATH="$PATH:/Applications/chromedriver"
 
 #   Set Default Editor (change 'Nano' to the editor of your choice)
 #   ------------------------------------------------------------
@@ -332,7 +333,7 @@ alias gitd="git diff"
 alias gitdb="git push origin --delete"
 alias gitdbl="git branch -d"
 alias gitf="git fetch -p --all"
-alias gitl="git log --oneline --decorate --all --graph"
+alias gitl="git log --pretty=format:\x22%ae committed on %cd\x22 --oneline --decorate --all --graph"
 alias gitm="git merge"
 alias gitn="git checkout -b"
 alias gitps="git push && git push --tags"
