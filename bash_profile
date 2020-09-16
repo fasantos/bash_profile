@@ -427,6 +427,7 @@ function iterm2_print_user_vars() {
 #   ------------------------------------------------------------
 function save_bp() {
   \cp -rf ~/workspace/sideProjects/bash_profile/bash_profile ~/.bash_profile
+  \cp -rf ~/workspace/sideProjects/bash_profile/bash_profile ~/.zshenv
   gitc  \"$@\"
   gitps
 }
