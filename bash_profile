@@ -360,6 +360,10 @@ function gitpl () {
     git remote prune origin
 }
 
+function gitdm () {
+    git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
+}
+
 #   httpDebug:  Download a web page and show info on what took time
 #   -------------------------------------------------------------------
     httpDebug () { /usr/bin/curl $@ -o /dev/null -w "dns: %{time_namelookup} connect: %{time_connect} pretransfer: %{time_pretransfer} starttransfer: %{time_starttransfer} total: %{time_total}\n" ; }
