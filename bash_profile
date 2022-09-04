@@ -334,7 +334,7 @@ alias gitd="git diff"
 alias gitdb="git push origin --delete"
 alias gitdbl="git branch -d"
 alias gitf="git fetch -p --all"
-alias gitl="git log --pretty=format:\x22%ae committed on %cd\x22 --oneline --decorate --all --graph"
+alias gitl="git log --pretty=format:\x22%ae --oneline --decorate --all --graph"
 alias gitm="git merge"
 alias gitn="git checkout -b"
 alias gitps="git push && git push --tags"
@@ -354,6 +354,7 @@ alias npmint="npm run integration"
 alias envp="export NODE_ENV=production"
 alias envd="export NODE_ENV=development"
 alias use="nvm use"
+alias python='/usr/local/bin/python3'
 
 function gitchr () {
     git checkout -b ${1} origin/${1}
