@@ -42,7 +42,7 @@
 
 #   Set terraform autocomplete
 #   ------------------------------------------------------------
-    export terraform -install-autocomplete
+#    export terraform -install-autocomplete
 
 #   Add color to terminal
 #   (this is all commented out as I use Mac Terminal Profiles)
@@ -333,6 +333,7 @@ alias gitbi="git bisect"
 alias gitc="git commit -am"
 alias gitcam="git commit -amend -m"
 alias gitcm="git commit -m"
+alias gitct="git commit -m 'test' --allow-empty"
 alias gitch="git checkout"
 alias gitd="git diff"
 alias gitdb="git push origin --delete"
